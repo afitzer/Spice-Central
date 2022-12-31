@@ -32,6 +32,10 @@
                     <a class="navbar-item">
                         Shop
                     </a>
+
+                    <a class="navbar-item">
+                        About
+                    </a>
         
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">
@@ -39,9 +43,6 @@
                         </a>
         
                         <div class="navbar-dropdown">
-                            <a class="navbar-item">
-                                About
-                            </a>
                             <a class="navbar-item">
                                 Jobs
                             </a>
@@ -66,42 +67,36 @@
                         <a class="button is-light">
                             Log in
                         </a>
+                        <a class="button is-light">
+                            Cart
+                        </a>
                     </div>
                 </div>
             </div>
         </nav>
 
-        <section class="hero is-small is-success mb-4">
+        <section class="hero is-small is-info is-bold">
             <div class="hero-body">
-                <h1 class="title is-1">Spice Central</h1>
-                <p class="subtitle is-4">
-                    Your custom built spice kits made to order and deliver to your door
-                </p>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <h1 class="title">
-                    Hello Spice Central!
-                </h1>
-                <p class="subtitle">
-                    My new website for <strong>Custom Spices</strong>
-                </p>
-                <button class="button is-link is-small">Button</button>
+                <div class="container has-text-centered">
+                    <figure class="image">
+                        <img src="/static/spices/spicebanner.jpg" alt="Spices" style="display: block; margin: 0 auto; width: 300px; height: 200px;">
+                    </figure>
+                    <h1 class="title">Welcome to the Spice Shop</h1>
+                    <h2 class="subtitle">Find the best spices for your cooking needs and curate your own custom spice kits.</h2>
+                </div>
             </div>
         </section>
 
         <section class="section">
             <div class="container">
                 <div class="columns">
-                    <div class="column is-one-third">
+                    <div class="column is-4">
                         <div class="box" style="background-color: #dcdec2;">
                             <article class="media">
                                 <div class="media-left">
                                     <figure class="image is-64x64">
                                         {% load static %}
-                                        <img src="{% static 'spices/spice.png' %}">
+                                        <img src="{% static 'spices/Cumin-Spice.webp' %}">
                                     </figure>
                                 </div>
                                 <div class="media-content">
@@ -117,14 +112,123 @@
                             </article>
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="box">
-                            Second column
+                    <div class="column is-4">
+                        <div class="box" style="background-color: #dcdec2;">
+                            <article class="media">
+                                <div class="media-left">
+                                    <figure class="image is-64x64">
+                                        {% load static %}
+                                        <img src="{% static 'spices/paprika.jpg' %}">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <div class="content">
+                                        <p>
+                                            <strong>Paprika</strong>
+                                            <br>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla
+                                            egestas.
+                                            Nullam condimentum luctus turpis.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="box">
-                            Third column
+                    <div class="column is-4">
+                        <div class="box" style="background-color: #dcdec2;">
+                            <article class="media">
+                                <div class="media-left">
+                                    <figure class="image is-64x64">
+                                        {% load static %}
+                                        <img src="{% static 'spices/cinamon.jpg' %}">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <div class="content">
+                                        <p>
+                                            <strong>Cinamon</strong>
+                                            <br>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla
+                                            egestas.
+                                            Nullam condimentum luctus turpis.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-4">
+                        <div class="box" style="background-color: #dcdec2;">
+                            <article class="media">
+                                <div class="media-left">
+                                    <figure class="image is-64x64">
+                                        {% load static %}
+                                        <img src="{% static 'spices/Cumin-Spice.webp' %}">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <div class="content">
+                                        <p>
+                                            <strong>Cumin</strong>
+                                            <br>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa
+                                            fringilla egestas.
+                                            Nullam condimentum luctus turpis.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="column is-4">
+                        <div class="box" style="background-color: #dcdec2;">
+                            <article class="media">
+                                <div class="media-left">
+                                    <figure class="image is-64x64">
+                                        {% load static %}
+                                        <img src="{% static 'spices/paprika.jpg' %}">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <div class="content">
+                                        <p>
+                                            <strong>Paprika</strong>
+                                            <br>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa
+                                            fringilla
+                                            egestas.
+                                            Nullam condimentum luctus turpis.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="column is-4">
+                        <div class="box" style="background-color: #dcdec2;">
+                            <article class="media">
+                                <div class="media-left">
+                                    <figure class="image is-64x64">
+                                        {% load static %}
+                                        <img src="{% static 'spices/cinamon.jpg' %}">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <div class="content">
+                                        <p>
+                                            <strong>Cinamon</strong>
+                                            <br>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa
+                                            fringilla
+                                            egestas.
+                                            Nullam condimentum luctus turpis.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
                         </div>
                     </div>
                 </div>
