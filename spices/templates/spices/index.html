@@ -5,165 +5,33 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-4">
-                    <div class="box" style="background-color: #dcdec2;">
-                        <article class="media">
-                            <div class="media-left">
-                                <figure class="image is-64x64">
-                                    {% load static %}
-                                    <img src="{% static 'spices/Cumin-Spice.webp' %}">
-                                </figure>
-                            </div>
-                            <div class="media-content">
-                                <div class="content">
-                                    <p>
-                                        <strong>Cumin</strong>
-                                        <br>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas.
-                                        Nullam condimentum luctus turpis.
-                                    </p>
-                                    <button class="button is-info is-rounded is-outlined">
-                                        Add to Cart
-                                    </button>
+                {% for product in products %}
+                    <div class="column is-one-fourth">
+                        <div class="box" style="background-color: #dcdec2;">
+                            <article class="media">
+                                <div class="media-left">
+                                    <figure class="image">
+                                        <img src="{{ product.image }}" alt="{{ product.name }}">
+                                    </figure>
                                 </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div class="column is-4">
-                    <div class="box" style="background-color: #dcdec2;">
-                        <article class="media">
-                            <div class="media-left">
-                                <figure class="image is-64x64">
-                                    {% load static %}
-                                    <img src="{% static 'spices/paprika.jpg' %}">
-                                </figure>
-                            </div>
-                            <div class="media-content">
-                                <div class="content">
-                                    <p>
-                                        <strong>Paprika</strong>
-                                        <br>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla
-                                        egestas.
-                                        Nullam condimentum luctus turpis.
-                                    </p>
-                                    <button class="button is-info is-rounded is-outlined">
-                                        Add to Cart
-                                    </button>
+                                <div class="media-content">
+                                    <div class="content">
+                                        <p>
+                                            <strong>{{ product.name }}</strong>
+                                            <br>
+                                            {{ product.description }}
+                                            <br>
+                                            <strong>${{ product.price }}</strong>
+                                        </p>
+                                        <button class="button is-info is-rounded is-outlined">
+                                            Add to Cart
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
+                            </article>
+                        </div>
                     </div>
-                </div>
-                <div class="column is-4">
-                    <div class="box" style="background-color: #dcdec2;">
-                        <article class="media">
-                            <div class="media-left">
-                                <figure class="image is-64x64">
-                                    {% load static %}
-                                    <img src="{% static 'spices/cinamon.jpg' %}">
-                                </figure>
-                            </div>
-                            <div class="media-content">
-                                <div class="content">
-                                    <p>
-                                        <strong>Cinamon</strong>
-                                        <br>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla
-                                        egestas.
-                                        Nullam condimentum luctus turpis.
-                                    </p>
-                                    <button class="button is-info is-rounded is-outlined">
-                                        Add to Cart
-                                    </button>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-            <div class="columns">
-                <div class="column is-4">
-                    <div class="box" style="background-color: #dcdec2;">
-                        <article class="media">
-                            <div class="media-left">
-                                <figure class="image is-64x64">
-                                    {% load static %}
-                                    <img src="{% static 'spices/Cumin-Spice.webp' %}">
-                                </figure>
-                            </div>
-                            <div class="media-content">
-                                <div class="content">
-                                    <p>
-                                        <strong>Cumin</strong>
-                                        <br>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa
-                                        fringilla egestas.
-                                        Nullam condimentum luctus turpis.
-                                    </p>
-                                    <button class="button is-info is-rounded is-outlined">
-                                        Add to Cart
-                                    </button>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div class="column is-4">
-                    <div class="box" style="background-color: #dcdec2;">
-                        <article class="media">
-                            <div class="media-left">
-                                <figure class="image is-64x64">
-                                    {% load static %}
-                                    <img src="{% static 'spices/paprika.jpg' %}">
-                                </figure>
-                            </div>
-                            <div class="media-content">
-                                <div class="content">
-                                    <p>
-                                        <strong>Paprika</strong>
-                                        <br>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa
-                                        fringilla
-                                        egestas.
-                                        Nullam condimentum luctus turpis.
-                                    </p>
-                                    <button class="button is-info is-rounded is-outlined">
-                                        Add to Cart
-                                    </button>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div class="column is-4">
-                    <div class="box" style="background-color: #dcdec2;">
-                        <article class="media">
-                            <div class="media-left">
-                                <figure class="image is-64x64">
-                                    {% load static %}
-                                    <img src="{% static 'spices/cinamon.jpg' %}">
-                                </figure>
-                            </div>
-                            <div class="media-content">
-                                <div class="content">
-                                    <p>
-                                        <strong>Cinamon</strong>
-                                        <br>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa
-                                        fringilla
-                                        egestas.
-                                        Nullam condimentum luctus turpis.
-                                    </p>
-                                    <button class="button is-info is-rounded is-outlined">
-                                        Add to Cart
-                                    </button>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>

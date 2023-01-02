@@ -5,116 +5,33 @@
     <section class="section">
         <div class="container is-fluid">
             <div class="columns is-multiline">
-                <div class="column is-one-quarter">
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image is-4by3">
-                                {% load static %}
-                                <img src="{% static 'spices/Cumin-Spice.webp' %}">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <div class="media">
-                                <div class="media-content">
-                                    <p class="title is-4">Cumin</p>
-                                    <p class="subtitle is-6">$2.00</p>
+                {% for product in products %}
+                    <div class="column is-one-quarter">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="{{ product.image }}" alt="{{ product.name }}">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <p class="title is-4">{{ product.name }}</p>
+                                        <p class="subtitle is-6">${{ product.price }}</p>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    {{ product.description }}
                                 </div>
                             </div>
-                            <div class="content">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quidem deleniti placeat dolores molestiae voluptatum, tempora neque tempore iure repudiandae quia dolorem itaque ipsa id. Dolor voluptas similique architecto corporis.
-                            </div>
+                            <footer class="card-footer">
+                                <button class="button is-info is-rounded is-outlined">
+                                    Add to Cart
+                                </button>
+                            </footer>
                         </div>
-                        <footer class="card-footer">
-                            <button class="button is-info is-rounded is-outlined">
-                                Add to Cart
-                            </button>
-                        </footer>
                     </div>
-                </div>
-                <div class="column is-one-quarter">
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image is-4by3">
-                                {% load static %}
-                                <img src="{% static 'spices/paprika.jpg' %}">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <div class="media">
-                                <div class="media-content">
-                                    <p class="title is-4">Paprika</p>
-                                    <p class="subtitle is-6">$2.50</p>
-                                </div>
-                            </div>
-                            <div class="content">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quidem deleniti placeat dolores
-                                molestiae voluptatum, tempora neque tempore iure repudiandae quia dolorem itaque ipsa id. Dolor voluptas
-                                similique architecto corporis.
-                            </div>
-                        </div>
-                        <footer class="card-footer">
-                            <button class="button is-info is-rounded is-outlined">
-                                Add to Cart
-                            </button>
-                        </footer>
-                    </div>
-                </div>
-                <div class="column is-one-quarter">
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image is-4by3">
-                                {% load static %}
-                                <img src="{% static 'spices/cinamon.jpg' %}">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <div class="media">
-                                <div class="media-content">
-                                    <p class="title is-4">Cinamon</p>
-                                    <p class="subtitle is-6">$3.00</p>
-                                </div>
-                            </div>
-                            <div class="content">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quidem deleniti placeat dolores
-                                molestiae voluptatum, tempora neque tempore iure repudiandae quia dolorem itaque ipsa id. Dolor voluptas
-                                similique architecto corporis.
-                            </div>
-                        </div>
-                        <footer class="card-footer">
-                            <button class="button is-info is-rounded is-outlined">
-                                Add to Cart
-                            </button>
-                        </footer>
-                    </div>
-                </div>
-                <div class="column is-one-quarter">
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image is-4by3">
-                                {% load static %}
-                                <img src="{% static 'spices/cinamon.jpg' %}">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <div class="media">
-                                <div class="media-content">
-                                    <p class="title is-4">Cinamon</p>
-                                    <p class="subtitle is-6">$3.00</p>
-                                </div>
-                            </div>
-                            <div class="content">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quidem deleniti placeat dolores
-                                molestiae voluptatum, tempora neque tempore iure repudiandae quia dolorem itaque ipsa id. Dolor voluptas
-                                similique architecto corporis.
-                            </div>
-                        </div>
-                        <footer class="card-footer">
-                            <button class="button is-info is-rounded is-outlined">
-                                Add to Cart
-                            </button>
-                        </footer>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
