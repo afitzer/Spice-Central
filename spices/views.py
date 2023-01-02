@@ -5,3 +5,6 @@ def index(request):
 
 def shop(request):
     return render(request, 'spices/shop.html')
+
+def about(request):
+    return render(request, 'spices/about.html')
