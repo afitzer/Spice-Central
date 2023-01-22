@@ -1,0 +1,16 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+<!-- Make a block for the header -->
+{% block header %}
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+{% endblock %}
+
+{% block content %}
+    <div id="chart"></div>
+    
+<script>
+    var data = JSON.parse('{{ graph_json|escapejs }}');
+    Plotly.newPlot('chart', data);
+</script>
+{% endblock %}
